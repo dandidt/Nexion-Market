@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=TASA+Explorer:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --bg-15: rgba(15, 15, 15, 1);
+    --bg-20: rgba(20, 20, 20, 1);
+    --bg-27: rgba(27, 27, 27, 1);
+    --bg-35: rgba(35, 35, 35, 1);
+    --bg-38: rgba(38, 38, 38, 1);
+    --bg-45: rgba(45, 45, 45, 1);
+    --bg-50: rgba(50, 50, 50, 1);
+    --bg-55: rgba(55, 55, 55, 1);
+    --bg-60: rgba(60, 60, 60, 1);
+    --bg-70: rgba(70, 70, 70, 1);
+
+    --color-baground-white: rgba(255, 255, 255, 0.2);
+    --color-baground-green: rgba(16, 185, 129, .1);
+    --color-baground-yellow: rgba(185, 160, 16, 0.1);
+    --color-baground-red: rgba(244, 63, 94, 0.1);
+
+    --bg-popup: rgba(20, 20, 20, 1);
+    --border-popup: 1px solid var(--bg-35);
+
+    --white: rgb(245, 245, 245);
+
+    --gray: rgb(163, 163, 163);
+    --gray-primary: rgb(115, 115, 115);
+    --gray-secondary: rgb(201, 201, 201);
+
+    --green: rgb(52, 211, 153);
+    --green-secondary: rgb(47, 180, 131);
+    --green-primary: rgb(31, 230, 157);
+    --green-border: rgba(16, 185, 129, 0.2);
+    
+    --red: rgb(250, 93, 117);
+    --red-secondary: rgb(216, 78, 98);
+    --red-primary: rgb(247, 66, 93);
+    --red-border: rgba(244, 63, 94, 0.2);
+    
+    --yellow: rgb(211, 161, 52);
+    --yellow-secondary: rgb(179, 136, 44);
+    --yellow-primary: rgb(248, 181, 36);
+    --yellow-border: rgba(185, 140, 16, 0.2);
+    
+    --wg-300: 300;
+    --wg-400: 400;
+    --wg-500: 500;
+    --wg-600: 600;
+    --wg-700: 700;
+    --wg-800: 800;
+
+    --sz-10: 10px;
+    --sz-12: 12px;
+    --sz-14: 14px;
+    --sz-16: 16px;
+    --sz-18: 18px;
+    --sz-20: 20px;
+    --sz-22: 22px;
+    --sz-24: 24px;
+    --sz-26: 26px;
+    --sz-28: 28px;
+    --sz-30: 30px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+    color: var(--white);
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: var(--bg-15);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 40px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.table-container {
+    background: var(--bg-27);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: var(--bg-35);
+}
+
+th {
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--gray);
+    border-bottom: 1px solid var(--bg-45);
+}
+
+th:first-child {
+    width: 50px;
+    text-align: center;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #2a2e3e;
+    font-size: 14px;
+}
+
+td:first-child {
+    text-align: center;
+    color: #8b92b3;
+}
+
+tr:hover {
+    background: var(--bg-38);
+}
+
+.coin-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.coin-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+.coin-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.coin-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.coin-symbol {
+    color: #8b92b3;
+    font-size: 12px;
+}
+
+.positive {
+    color: var(--green);
+}
+
+.negative {
+    color: var(--red);
+}
+
+.change-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.loading {
+    text-align: center;
+    padding: 40px;
+    color: var(--gray);
+}
+
+.star {
+    color: #8b92b3;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.star:hover {
+    color: #ffd700;
+}
+
+.price {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+}
+
+.updating {
+    animation: pulse 1s ease-in-out;
+}
